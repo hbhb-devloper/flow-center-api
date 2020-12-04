@@ -19,9 +19,6 @@ public class FlowNodePropVO implements Serializable {
 
     private static final long serialVersionUID = -2015324582583278172L;
 
-    @Schema(description = "流程节点属性id")
-    private Integer id;
-
     @Schema(description = "流程节点id", required = true)
     private String flowNodeId;
 

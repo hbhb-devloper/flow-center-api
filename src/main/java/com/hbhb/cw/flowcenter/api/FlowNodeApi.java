@@ -1,6 +1,7 @@
 package com.hbhb.cw.flowcenter.api;
 
 
+import com.hbhb.cw.flowcenter.vo.FlowNodePropVO;
 import com.hbhb.cw.flowcenter.vo.SelectVO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,4 +30,13 @@ public interface FlowNodeApi {
      */
     @GetMapping("/count")
     int countFlowNode(@RequestParam("flowId") Long flowId);
+
+    /**
+     *  获取节点属性
+     *
+     * @param flowId 流程id
+     * @return 节点属性详情
+     */
+    @GetMapping("/list/{flowId}")
+    List<FlowNodePropVO> getFlowProp(Long flowId);
 }

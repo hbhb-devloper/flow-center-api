@@ -2,6 +2,7 @@ package com.hbhb.cw.flowcenter.api;
 
 import com.hbhb.cw.flowcenter.vo.FlowNodeNoticeResVO;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
