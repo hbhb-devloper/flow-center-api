@@ -14,7 +14,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FlowRoleResVO implements Serializable {
-
     private static final long serialVersionUID = -7769023440033310363L;
 
     @Schema(description = "流程角色用户关联id")
@@ -37,5 +36,4 @@ public class FlowRoleResVO implements Serializable {
 
     @Schema(description = "用户名称")
     private String nickName;
-
 }

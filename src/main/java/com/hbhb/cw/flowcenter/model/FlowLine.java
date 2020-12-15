@@ -1,5 +1,7 @@
 package com.hbhb.cw.flowcenter.model;
 
+import org.beetl.sql.annotation.entity.AutoID;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,6 +15,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class FlowLine implements Serializable {
     private static final long serialVersionUID = 54337719841823496L;
+
+    @AutoID
     private String id;
 
     private Long flowId;

@@ -1,18 +1,17 @@
 package com.hbhb.cw.flowcenter.vo;
 
+import java.io.Serializable;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * @author wangxiaogang
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FlowNodeNoticeResVO {
+public class FlowNodeNoticeVO implements Serializable {
+    private static final long serialVersionUID = -463607908615108325L;
 
     private Long id;
 
@@ -27,6 +26,4 @@ public class FlowNodeNoticeResVO {
 
     @Schema(description = "提醒信息")
     private String inform;
-
-
 }

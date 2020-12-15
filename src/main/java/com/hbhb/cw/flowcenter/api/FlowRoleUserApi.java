@@ -9,21 +9,13 @@ import java.util.List;
  * @author wangxiaogang
  */
 public interface FlowRoleUserApi {
-    /**
-     * 跟据单位id角色id获取单位下某一角色对应用户
-     *
-     * @param roleName 单位id
-     * @return 用户id
-     */
-    @GetMapping("/role-list")
-    List<Integer> getFlowRoleUserList(@RequestParam("roleName") String roleName);
 
-    /**
-     * 通过用户id得到流程角色
-     *
-     * @param userId 用户id
-     * @return 角色id
-     */
-    @GetMapping("/role-ids")
-    List<Long> getFlowRoleIdByUserId(Integer userId);
+    @GetMapping("/user-id")
+    List<Integer> getUserIdByRoleName(@RequestParam("roleName") String roleName);
+
+    @GetMapping("/role-name")
+    List<String> getRoleNameByUserId(@RequestParam("userId") Integer userId);
+
+    @GetMapping("/role-id")
+    List<Long> getRoleIdByUserId(@RequestParam("roleName") Integer userId);
 }
