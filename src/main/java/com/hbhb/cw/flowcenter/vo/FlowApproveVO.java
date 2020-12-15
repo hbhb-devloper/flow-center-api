@@ -15,7 +15,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ApproveFlowVO implements Serializable {
+public class FlowApproveVO implements Serializable {
     private static final long serialVersionUID = 1144429682481518481L;
 
     @Schema(description = "流程节点id")
