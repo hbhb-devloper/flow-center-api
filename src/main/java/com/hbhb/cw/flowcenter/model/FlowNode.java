@@ -1,13 +1,11 @@
 package com.hbhb.cw.flowcenter.model;
 
-import org.beetl.sql.annotation.entity.AutoID;
+import java.io.Serializable;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * @author yzc
@@ -19,7 +17,6 @@ import java.io.Serializable;
 public class FlowNode implements Serializable {
     private static final long serialVersionUID = -5299336784151828647L;
 
-    @AutoID
     private String id;
 
     private Long flowId;

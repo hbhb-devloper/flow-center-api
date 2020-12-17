@@ -1,12 +1,12 @@
 package com.hbhb.cw.flowcenter.vo;
 
+import java.io.Serializable;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * @author yzc
@@ -18,6 +18,8 @@ import java.io.Serializable;
 public class FlowNodePropVO implements Serializable {
 
     private static final long serialVersionUID = -2015324582583278172L;
+
+    private Integer id;
 
     @Schema(description = "流程节点id", required = true)
     private String flowNodeId;
