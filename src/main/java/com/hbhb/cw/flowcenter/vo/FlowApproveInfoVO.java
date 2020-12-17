@@ -44,7 +44,7 @@ public class FlowApproveInfoVO {
     private FlowOperationVO operation;
 
     @Schema(description = "审批意见")
-    private FlowApproverVO suggestion;
+    private FlowSuggestionVO suggestion;
 
     @Schema(description = "是否可以填写（0-可填写、1-不可填写）")
     private Boolean input;
