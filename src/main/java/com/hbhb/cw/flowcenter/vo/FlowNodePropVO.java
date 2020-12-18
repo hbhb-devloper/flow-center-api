@@ -1,6 +1,7 @@
 package com.hbhb.cw.flowcenter.vo;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -46,7 +47,7 @@ public class FlowNodePropVO implements Serializable {
     private Boolean isJoin;
 
     @Schema(description = "金额阀值")
-    private String amount;
+    private BigDecimal amount;
 
     @Schema(description = "启用条件")
     private Integer enableCond;
