@@ -10,12 +10,15 @@ import java.util.List;
  */
 public interface FlowRoleUserApi {
 
-    @GetMapping("/user-id")
+    @GetMapping("/user-id/by-role-id")
+    List<Integer> getUserIdByRoleId(@RequestParam("roleId") Long roleId);
+
+    @GetMapping("/user-id/by-role-name")
     List<Integer> getUserIdByRoleName(@RequestParam("roleName") String roleName);
 
     @GetMapping("/role-name")
     List<String> getRoleNameByUserId(@RequestParam("userId") Integer userId);
 
     @GetMapping("/role-id")
-    List<Long> getRoleIdByUserId(@RequestParam("roleName") Integer userId);
+    List<Long> getRoleIdByUserId(@RequestParam("userId") Integer userId);
 }

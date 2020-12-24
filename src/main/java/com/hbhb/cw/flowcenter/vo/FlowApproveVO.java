@@ -1,26 +1,34 @@
 package com.hbhb.cw.flowcenter.vo;
 
+import java.io.Serializable;
+import java.util.List;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-
 /**
- * @author wangxiaogang
+ * @author wxg
+ * @since 2020-09-08
  */
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class FlowApproveVO implements Serializable {
-    private static final long serialVersionUID = 1144429682481518481L;
+    private static final long serialVersionUID = -7832144508987931719L;
 
-    @Schema(description = "流程节点id")
-    private String flowNodeId;
+    @Schema(description = "业务流程id")
+    private Long id;
 
-    @Schema(description = "审批人id")
-    private Integer userId;
+    @Schema(description = "操作")
+    private Integer operation;
+
+    @Schema(description = "审批意见")
+    private String suggestion;
+
+    @Schema(description = "所有节点对应的审批人（必非空、按节点顺序）")
+    private List<NodeApproverReqVO> approvers;
 }

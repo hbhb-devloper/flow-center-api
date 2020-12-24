@@ -1,25 +1,27 @@
 package com.hbhb.cw.flowcenter.vo;
 
+import java.io.Serializable;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-
 /**
- * @author wangxiaogang
+ * @author xiaokang
+ * @since 2020-08-01
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Builder
-public class FlowSuggestionVO implements Serializable {
+@NoArgsConstructor
+@AllArgsConstructor
+public class NodeApproverVO implements Serializable {
 
-    private static final long serialVersionUID = 6619168773671392156L;
-    @Schema(description = "审批意见")
-    private String value;
+
+    private static final long serialVersionUID = 8637947015173631875L;
+    @Schema(description = "审批人id")
+    private Integer value;
     @Schema(description = "审批人是否只读（true-只读、false-可编辑）")
     private Boolean readOnly;
 }

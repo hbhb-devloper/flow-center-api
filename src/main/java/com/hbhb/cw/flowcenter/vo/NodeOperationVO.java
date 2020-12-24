@@ -1,12 +1,12 @@
 package com.hbhb.cw.flowcenter.vo;
 
+import java.io.Serializable;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
 
 /**
  * @author xiaokang
@@ -16,12 +16,12 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class FlowApproverVO implements Serializable {
+public class NodeOperationVO implements Serializable {
 
 
-    private static final long serialVersionUID = 8637947015173631875L;
-    @Schema(description = "审批人id")
+    private static final long serialVersionUID = -6301205006781276059L;
+    @Schema(description = "操作按钮值")
     private Integer value;
-    @Schema(description = "审批人是否只读（true-只读、false-可编辑）")
-    private Boolean readOnly;
+    @Schema(description = "操作按钮是否显示（true-隐藏、false-显示）")
+    private Boolean hidden;
 }
