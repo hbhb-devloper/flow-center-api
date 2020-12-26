@@ -21,7 +21,7 @@ public class NodeOperationVO implements Serializable {
 
     private static final long serialVersionUID = -6301205006781276059L;
     @Schema(description = "操作按钮值")
-    private Integer value;
+    private String value;
     @Schema(description = "操作按钮是否显示（true-隐藏、false-显示）")
     private Boolean hidden;
 }
