@@ -12,11 +12,5 @@
         <artifactId>hbhb-api-parent</artifactId>
         <version>1.0</version>
     </parent>
-    <dependencies>
-        <dependency>
-            <groupId>com.hbhb</groupId>
-            <artifactId>hbhb-api-core</artifactId>
-            <version>1.0</version>
-        </dependency>
-    </dependencies>
+
 </project>

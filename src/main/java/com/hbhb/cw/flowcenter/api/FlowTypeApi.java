@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 public interface FlowTypeApi {
 
+    @GetMapping("/name")
+    String getNameById(@RequestParam("id") Long id);
+
     @GetMapping("/id")
     Long getTypeIdByNode(@RequestParam("flowNodeId") String flowNodeId);
 }
