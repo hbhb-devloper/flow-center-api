@@ -21,7 +21,7 @@ public class NodeApproverVO implements Serializable {
 
     private static final long serialVersionUID = 8637947015173631875L;
     @Schema(description = "审批人id")
-    private String value;
+    private Integer value;
     @Schema(description = "审批人是否只读（true-只读、false-可编辑）")
     private Boolean readOnly;
 }
