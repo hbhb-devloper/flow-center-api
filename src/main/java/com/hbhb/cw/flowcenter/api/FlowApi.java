@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author wangxiaogang
@@ -21,5 +22,8 @@ public interface FlowApi {
 
     @GetMapping("/info/by-type")
     List<Flow> getFlowsByTypeId(@RequestParam("typeId") Long typeId);
+
+    @GetMapping("/map/flow-name")
+    Map<Long, String> getFlowMapName(@RequestParam("typeId") Long typeId);
 
 }
