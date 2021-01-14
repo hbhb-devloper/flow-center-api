@@ -1,5 +1,7 @@
 package com.hbhb.cw.flowcenter.api;
 
+import com.hbhb.api.core.bean.SelectVO;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -21,4 +23,8 @@ public interface FlowRoleUserApi {
 
     @GetMapping("/role-id")
     List<Long> getRoleIdByUserId(@RequestParam("userId") Integer userId);
+
+    @GetMapping("/list/User-id")
+    List<SelectVO> getUserByRoleAndUnit(@RequestParam("unitId") Integer unitId,
+                                        @RequestParam("userId") Long flowRoleId);
 }
