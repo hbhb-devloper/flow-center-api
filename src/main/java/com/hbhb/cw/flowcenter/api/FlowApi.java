@@ -24,6 +24,6 @@ public interface FlowApi {
     List<Flow> getFlowsByTypeId(@RequestParam("typeId") Long typeId);
 
     @GetMapping("/map/flow-name")
-    Map<Long, String> getFlowMapName(@RequestParam("typeId") Long typeId);
+    Map<Long, String> getFlowMapName(@RequestParam("flowIds") List<Long> flowIds);
 
 }

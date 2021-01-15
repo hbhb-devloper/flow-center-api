@@ -3,6 +3,7 @@ package com.hbhb.cw.flowcenter.api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,5 +18,5 @@ public interface FlowTypeApi {
     Long getTypeIdByNode(@RequestParam("flowNodeId") String flowNodeId);
 
     @GetMapping("/map/type-name")
-    Map<Long, String> getFlowTypeMapName();
+    Map<Long, String> getFlowTypeMapName(@RequestParam("flowTypeIds") List<Long> flowTypeIds);
 }
